@@ -1,0 +1,21 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+**/.idea
+*.iws
+
+# Mac
+.DS_Store
+
+# Gradle
+**/.gradle
+/local.properties
+/build
+/out
+/bin/
+
+**/out
+**/build

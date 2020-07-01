@@ -1,0 +1,8 @@
+author: Joo200
+name: NbtSyncPlugin
+version: 1.0
+api-version: 1.13
+main: "de.terraconia.nbtsync.NbtSyncPlugin"
+
+depend:
+- Baba43Lib

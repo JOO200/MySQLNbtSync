@@ -1,0 +1,24 @@
+def isBungee = false
+project.ext.set('isBungee', isBungee)
+
+buildscript {
+    if (project.hasProperty('tcGradleScripts')) {
+        apply from: file(tcGradleScripts + '/tc-buildscript.gradle'), to: buildscript
+    }
+
+    repositories {
+        jcenter()
+    }
+}
+
+
+if(project.hasProperty('tcGradleScripts')) {
+    apply from: tcGradleScripts + '/tc-project.gradle'
+}
+
+dependencies {
+    compile group: 'tc.plugins', name: 'bukkit', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
+    compile group: 'de.terraconia', name: 'Baba43Lib-Bukkit', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
+    compile group: 'de.terraconia', name: 'ServerAPI-Bukkit', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
+    compile group: 'de.terraconia', name: 'TerraconiaCommandFramework', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
+}
