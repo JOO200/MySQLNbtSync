@@ -9,9 +9,7 @@ import de.terraconia.terrapaper.NBTStorage;
 import de.terraconia.terrapaper.NBTStorageProvider;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.AsyncPlayerPreLoginEvent;
 
 import java.io.ByteArrayInputStream;
 import java.sql.*;
@@ -131,12 +129,6 @@ public class NbtDatabase extends FutureDbController implements NBTStorage, Liste
         }
 
         return data;
-        /*
-        Bukkit.getLogger().info("Attempt to get NBT Data + " + uniqueId.toString());
-        do {
-            } while(count++ < 10);
-            throw new SQLException("UUID " + uniqueId.toString() + " not released from server " + latestServer);
-        });*/
 
     }
 
